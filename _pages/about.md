@@ -13,8 +13,8 @@ Projects
 ======
 ### Reconstruction of Genealogy in Random Trees
 Explores genealogical reconstruction on recursive tree structures, developed during my research internship under the supervision of Christophe Giraud.
-[View Project PDF](files/Master's_Thesis.pdf)
+[Show PDF](files/Master's_Thesis.pdf)
 
 ### Community Detection in an Erdős–Rényi Graph
 Based on "High-Dimensional Probability" (2018) by Roman Vershynin and under the supervision of Edouard Maurel-Segala.
-[View Project PDF](files/Community_Detection.pdf)
+[Show PDF](files/Community_Detection.pdf)
