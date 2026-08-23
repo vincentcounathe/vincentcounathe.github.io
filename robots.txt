@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vincentcounathe.github.io/sitemap.xml

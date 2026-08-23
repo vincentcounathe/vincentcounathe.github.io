@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4EJXZVC9F"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-P4EJXZVC9F');
+        </script>
+    <title>Vincent Counathe | Quantization and Low-Precision Training</title>
+    <meta name="description" content="Vincent Counathe is a PhD student at Cornell working on quantization and low-precision training for large language models.">
+    <meta name="author" content="Vincent Counathe">
+    <meta name="google-site-verification" content="tcW6WmHyX93Jh3wq-9hqSOfacci4vcICvPmJZ6hnfb4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://vincentcounathe.github.io/">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Vincent Counathe">
+    <meta property="og:title" content="Vincent Counathe | Quantization and Low-Precision Training">
+    <meta property="og:description" content="Cornell PhD student working on quantization and low-precision training for large language models.">
+    <meta property="og:url" content="https://vincentcounathe.github.io/">
+    <meta property="og:image" content="https://vincentcounathe.github.io/images/profile.jpg">
+    <meta property="og:image:alt" content="Portrait of Vincent Counathe">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@counathe">
+    <meta name="twitter:title" content="Vincent Counathe | Quantization and Low-Precision Training">
+    <meta name="twitter:description" content="Cornell PhD student working on quantization and low-precision training for large language models.">
+    <meta name="twitter:image" content="https://vincentcounathe.github.io/images/profile.jpg">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://vincentcounathe.github.io/#website",
+            "url": "https://vincentcounathe.github.io/",
+            "name": "Vincent Counathe"
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://vincentcounathe.github.io/#profile",
+            "url": "https://vincentcounathe.github.io/",
+            "name": "Vincent Counathe",
+            "dateModified": "2026-08-22",
+            "isPartOf": {
+              "@id": "https://vincentcounathe.github.io/#website"
+            },
+            "mainEntity": {
+              "@id": "https://vincentcounathe.github.io/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://vincentcounathe.github.io/#person",
+            "name": "Vincent Counathe",
+            "alternateName": "@counathe",
+            "description": "Cornell PhD student working on quantization and low-precision training for large language models.",
+            "url": "https://vincentcounathe.github.io/",
+            "image": "https://vincentcounathe.github.io/images/profile.jpg",
+            "email": "mailto:vc383@cornell.edu",
+            "jobTitle": "PhD Student",
+            "mainEntityOfPage": {
+              "@id": "https://vincentcounathe.github.io/#profile"
+            },
+            "affiliation": [
+              {
+                "@type": "CollegeOrUniversity",
+                "name": "Cornell University",
+                "url": "https://www.cornell.edu/"
+              },
+              {
+                "@type": "Organization",
+                "name": "Together AI",
+                "url": "https://www.together.ai/"
+              }
+            ],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Université Paris-Saclay",
+              "url": "https://www.universite-paris-saclay.fr/"
+            },
+            "sameAs": [
+              "https://github.com/vincentcounathe",
+              "https://x.com/counathe",
+              "https://www.linkedin.com/in/vincent-counathe"
+            ],
+            "knowsAbout": [
+              "Quantization",
+              "Quantization-aware training",
+              "Low-precision training",
+              "Large language models"
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      /* Container and table styling */
+      body {
+        background-color: white;
+        color: black;
+      }
+
+      table {
+        width: 100%;
+        max-width: 800px;
+        border: 0;
+        border-collapse: separate;
+        border-spacing: 0 12px; /* vertical spacing between rows */
+        margin: 0 auto;
+      }
+      td {
+        padding: 16px 20px;
+        vertical-align: middle;
+      }
+
+      /* Name styling */
+      .name {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+      }
+
+      /* Paper title styling */
+      .papertitle {
+        font-weight: 600;
+        font-size: 1.1em;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      /* Paragraphs inside table cells */
+      table p {
+        margin: 6px 0 0 0;
+        padding: 0;
+        line-height: 1.4;
+      }
+
+      .section-heading td {
+        padding-bottom: 0;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+      }
+
+      .section-heading + tr td {
+        padding-top: 0;
+      }
+
+      /* Link styling (optional) */
+      a {
+        color: #0645ad;
+        text-decoration: none;
+      }
+      a:hover, a:focus {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        table {
+          max-width: 100%;
+          border-spacing: 0 8px;
+        }
+
+        td {
+          padding: 12px 18px;
+        }
+
+        .bio-text,
+        .bio-photo {
+          display: block;
+          width: auto !important;
+          max-width: none !important;
+        }
+
+        .bio-text {
+          padding-bottom: 8px;
+        }
+
+        .bio-photo {
+          padding-top: 4px;
+          text-align: center;
+        }
+
+        .bio-photo a {
+          display: inline-block;
+          width: 170px;
+          max-width: 48vw;
+        }
+
+        .bio-photo img {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .name {
+          padding-top: 8px;
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+    <table role="presentation">
+      <tbody>
+        <tr>
+          <td class="bio-text" style="width:63%;">
+            <h1 class="name" style="text-align: center;">Vincent Counathe</h1>
+            <p style="font-size: 17px; line-height: 1.35; text-align: center; margin: 12px 0 16px 0;">
+              <strong>Quantization and low-precision training for large language models.</strong>
+            </p>
+            <p>
+              I am pursuing a PhD at
+              <a href="https://www.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell University</a>, advised by
+              <a href="https://www.cs.cornell.edu/~cdesa/" target="_blank" rel="noopener noreferrer">Chris De Sa</a>, and work on quantization at
+              <a href="https://www.together.ai/" target="_blank" rel="noopener noreferrer">Together AI</a>.
+            </p>
+            <p style="text-align:center; margin-top: 12px;">
+              <a href="mailto:vc383@cornell.edu">Email</a> &nbsp;/&nbsp;
+              <a href="https://github.com/vincentcounathe" target="_blank" rel="me noopener noreferrer">GitHub</a> &nbsp;/&nbsp;
+              <a href="https://x.com/counathe" target="_blank" rel="me noopener noreferrer">X</a> &nbsp;/&nbsp;
+              <a href="https://www.linkedin.com/in/vincent-counathe" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+            </p>
+          </td>
+          <td class="bio-photo" style="width:37%; max-width:37%;">
+            <a href="images/profile.jpg" target="_blank" rel="noopener noreferrer">
+              <img style="width:100%; height:auto; max-width:100%; object-fit: cover; border-radius: 50%;"
+                   alt="Portrait of Vincent Counathe" src="images/profile.jpg" width="600" height="600">
+            </a>
+          </td>
+        </tr>
+
+        <tr class="section-heading">
+          <td colspan="2">
+            <h2>Selected Research</h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <a class="papertitle" href="https://arxiv.org/abs/2608.13966" target="_blank" rel="noopener noreferrer">QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction</a>
+            <em><strong>Vincent Counathe</strong>, Ben Athiwaratkun, Christopher De Sa, Tianyi Zhang</em><br>
+            <span>arXiv preprint, 2026</span>
+            <p>
+              QUASAR treats quantization-aware training as a weight reconstruction problem, continuously fitting a loss-aware quantized representation as the latent full-precision weights evolve. Its analysis connects weight reconstruction quality to the optimization dynamics and final quantized-model loss.
+            </p>
+            <p>
+              <a href="https://arxiv.org/abs/2608.13966" target="_blank" rel="noopener noreferrer">Paper</a>
+              &nbsp;·&nbsp;
+              <span style="color: #666;">Code &nbsp;·&nbsp; Checkpoints &nbsp;·&nbsp; Technical note (forthcoming)</span>
+            </p>
+          </td>
+        </tr>
+
+        <tr class="section-heading">
+          <td colspan="2">
+            <h2>Background</h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <p>
+              Before Cornell, I completed my Master's in Statistics and Machine Learning at
+              <a href="https://www.imo.universite-paris-saclay.fr/en/" target="_blank" rel="noopener noreferrer">Université Paris-Saclay (Institut de Mathématiques d'Orsay)</a>, where I worked on high-dimensional statistics and machine learning with
+              <a href="https://florentkrzakala.com/" target="_blank" rel="noopener noreferrer">Florent Krzakala</a>,
+              <a href="https://people.epfl.ch/lenka.zdeborova/?lang=en" target="_blank" rel="noopener noreferrer">Lenka Zdeborová</a>, and
+              <a href="https://www.imo.universite-paris-saclay.fr/~christophe.giraud/" target="_blank" rel="noopener noreferrer">Christophe Giraud</a>.
+            </p>
+          </td>
+        </tr>
+
+        <tr class="section-heading">
+          <td colspan="2">
+            <h2>Earlier Research in Probability and Statistics</h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <span class="papertitle">Statistical Risk Bounds for Genealogical Reconstruction on Random Recursive Trees</span>
+            <em>Vincent Counathe</em><br>
+            <p>
+              Non-asymptotic risk bounds for a Jordan-ordering estimator in genealogical inference.
+              <a href="data/Random_Trees.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <span class="papertitle">Localization Schemes for Mixing Bounds in Markov Chains</span>
+            <em>Vincent Counathe, Matthieu Dagès</em><br>
+            <p>
+              Expository note on the Chen–Eldan framework.
+              <a href="data/Localization_Schemes.pdf" target="_blank" rel="noopener noreferrer">[Note]</a>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <span class="papertitle">Community Detection in Random Graphs</span>
+            <em>Vincent Counathe, Matthieu Dagès</em><br>
+            <p>
+              Expository note on spectral methods for community detection in random graphs.
+              <a href="data/Community_Detection.pdf" target="_blank" rel="noopener noreferrer">[Note]</a>
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </main>
+
+    <footer>
+    <p style="font-size:small; text-align:center; margin-top:2em;">
+      <a href="mailto:vc383@cornell.edu">Email</a> &nbsp;/&nbsp;
+      <a href="https://github.com/vincentcounathe" target="_blank" rel="me noopener noreferrer">GitHub</a> &nbsp;/&nbsp;
+      <a href="https://x.com/counathe" target="_blank" rel="me noopener noreferrer">X</a> &nbsp;/&nbsp;
+      <a href="https://www.linkedin.com/in/vincent-counathe" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+    </p>
+    </footer>
+  </body>
+</html>
