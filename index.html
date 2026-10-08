@@ -9,7 +9,9 @@
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-P4EJXZVC9F');
+          if (window.location.hostname === 'vincentcounathe.github.io') {
+            gtag('config', 'G-P4EJXZVC9F');
+          }
         </script>
     <title>Vincent Counathe | Quantization and Low-Precision Training</title>
     <meta name="description" content="Vincent Counathe is a PhD student at Cornell working on quantization and low-precision training for large language models.">
@@ -47,7 +49,7 @@
             "@id": "https://vincentcounathe.github.io/#profile",
             "url": "https://vincentcounathe.github.io/",
             "name": "Vincent Counathe",
-            "dateModified": "2026-08-22",
+            "dateModified": "2026-10-08",
             "isPartOf": {
               "@id": "https://vincentcounathe.github.io/#website"
             },
@@ -87,8 +89,7 @@
             },
             "sameAs": [
               "https://github.com/vincentcounathe",
-              "https://x.com/counathe",
-              "https://www.linkedin.com/in/vincent-counathe"
+              "https://x.com/counathe"
             ],
             "knowsAbout": [
               "Quantization",
@@ -101,223 +102,113 @@
       }
     </script>
 
-    <style>
-      /* Container and table styling */
-      body {
-        background-color: white;
-        color: black;
-      }
-
-      table {
-        width: 100%;
-        max-width: 800px;
-        border: 0;
-        border-collapse: separate;
-        border-spacing: 0 12px; /* vertical spacing between rows */
-        margin: 0 auto;
-      }
-      td {
-        padding: 16px 20px;
-        vertical-align: middle;
-      }
-
-      /* Name styling */
-      .name {
-        font-size: 28px;
-        font-weight: bold;
-        margin: 0 0 10px 0;
-      }
-
-      /* Paper title styling */
-      .papertitle {
-        font-weight: 600;
-        font-size: 1.1em;
-        display: block;
-        margin-bottom: 6px;
-      }
-
-      /* Paragraphs inside table cells */
-      table p {
-        margin: 6px 0 0 0;
-        padding: 0;
-        line-height: 1.4;
-      }
-
-      .section-heading td {
-        padding-bottom: 0;
-      }
-
-      .section-heading h2 {
-        margin: 0;
-      }
-
-      .section-heading + tr td {
-        padding-top: 0;
-      }
-
-      /* Link styling (optional) */
-      a {
-        color: #0645ad;
-        text-decoration: none;
-      }
-      a:hover, a:focus {
-        text-decoration: underline;
-      }
-
-      @media (max-width: 640px) {
-        table {
-          max-width: 100%;
-          border-spacing: 0 8px;
-        }
-
-        td {
-          padding: 12px 18px;
-        }
-
-        .bio-text,
-        .bio-photo {
-          display: block;
-          width: auto !important;
-          max-width: none !important;
-        }
-
-        .bio-text {
-          padding-bottom: 8px;
-        }
-
-        .bio-photo {
-          padding-top: 4px;
-          text-align: center;
-        }
-
-        .bio-photo a {
-          display: inline-block;
-          width: 170px;
-          max-width: 48vw;
-        }
-
-        .bio-photo img {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        .name {
-          padding-top: 8px;
-          font-size: 26px;
-        }
-      }
-    </style>
   </head>
-
   <body>
-    <main>
-    <table role="presentation">
-      <tbody>
-        <tr>
-          <td class="bio-text" style="width:63%;">
-            <h1 class="name" style="text-align: center;">Vincent Counathe</h1>
-            <p style="font-size: 17px; line-height: 1.35; text-align: center; margin: 12px 0 16px 0;">
-              <strong>Quantization and low-precision training for large language models.</strong>
-            </p>
-            <p>
-              I am pursuing a PhD at
-              <a href="https://www.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell University</a>, advised by
-              <a href="https://www.cs.cornell.edu/~cdesa/" target="_blank" rel="noopener noreferrer">Chris De Sa</a>, and work on quantization at
-              <a href="https://www.together.ai/" target="_blank" rel="noopener noreferrer">Together AI</a>.
-            </p>
-            <p style="text-align:center; margin-top: 12px;">
-              <a href="mailto:vc383@cornell.edu">Email</a> &nbsp;/&nbsp;
-              <a href="https://github.com/vincentcounathe" target="_blank" rel="me noopener noreferrer">GitHub</a> &nbsp;/&nbsp;
-              <a href="https://x.com/counathe" target="_blank" rel="me noopener noreferrer">X</a> &nbsp;/&nbsp;
-              <a href="https://www.linkedin.com/in/vincent-counathe" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
-            </p>
-          </td>
-          <td class="bio-photo" style="width:37%; max-width:37%;">
-            <a href="images/profile.jpg" target="_blank" rel="noopener noreferrer">
-              <img style="width:100%; height:auto; max-width:100%; object-fit: cover; border-radius: 50%;"
-                   alt="Portrait of Vincent Counathe" src="images/profile.jpg" width="600" height="600">
+    <a class="skip-link" href="#research">Skip to research</a>
+    <main class="page">
+      <section class="intro" aria-label="About Vincent">
+        <header class="profile">
+          <a class="portrait" href="images/profile.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="images/profile.jpg" alt="Portrait of Vincent Counathe" width="600" height="600" fetchpriority="high">
+          </a>
+          <h1>Vincent Counathe</h1>
+          <nav class="contact-links" aria-label="Contact and profiles">
+            <a href="mailto:vc383@cornell.edu">Email</a>
+            <a href="https://github.com/vincentcounathe" target="_blank" rel="me noopener noreferrer">GitHub</a>
+            <a href="https://x.com/counathe" target="_blank" rel="me noopener noreferrer">X</a>
+          </nav>
+        </header>
+        <div class="intro-copy">
+          <p>I work on making LLM training and inference more efficient. To that end, I develop algorithms that improve model quality at low precision, alongside systems that make them efficient on actual hardware.</p>
+          <p>I want to understand which limits of low-precision learning are fundamental and which can be overcome with better algorithms. Ultimately, the goal is better models for the same hardware and time budget: faster computation lets us train larger models, or the same model on more tokens.</p>
+          <p>I’m pursuing a PhD at <a href="https://www.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell</a>, advised by <a href="https://www.cs.cornell.edu/~cdesa/" target="_blank" rel="noopener noreferrer">Chris De Sa</a>, and I work on quantization at <a href="https://www.together.ai/" target="_blank" rel="noopener noreferrer">Together AI</a>.</p>
+        </div>
+      </section>
+
+      <section class="research-section" id="research" aria-labelledby="selected-heading">
+        <h2 id="selected-heading">Selected Research</h2>
+        <article class="paper">
+          <figure class="paper-figure full-size-figure">
+            <a href="images/research/quasar-gradients.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the QUASAR gradient figure at full size" title="Open full-size figure">
+              <img src="images/research/quasar-gradients.png" alt="Standard QAT and QUASAR loss surfaces: bringing reconstructed weights closer to latent weights improves the direction of the applied gradient." width="2400" height="1175" loading="lazy">
             </a>
-          </td>
-        </tr>
-
-        <tr class="section-heading">
-          <td colspan="2">
-            <h2>Selected Research</h2>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <a class="papertitle" href="https://arxiv.org/abs/2608.13966" target="_blank" rel="noopener noreferrer">QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction</a>
-            <em><strong>Vincent Counathe</strong>, Ben Athiwaratkun, Christopher De Sa, Tianyi Zhang</em><br>
-            <span>arXiv preprint, 2026</span>
-            <p>
-              QUASAR treats quantization-aware training as a weight reconstruction problem, continuously fitting a loss-aware quantized representation as the latent full-precision weights evolve. Its analysis connects weight reconstruction quality to the optimization dynamics and final quantized-model loss.
-            </p>
-            <p>
+          </figure>
+          <div class="paper-copy">
+            <h3><a href="https://arxiv.org/abs/2608.13966" target="_blank" rel="noopener noreferrer">QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction</a></h3>
+            <p class="authors"><strong>Vincent Counathe</strong>, <a href="https://benathi.github.io/" target="_blank" rel="noopener noreferrer">Ben Athiwaratkun</a>, <a href="https://www.cs.cornell.edu/~cdesa/" target="_blank" rel="noopener noreferrer">Christopher De Sa</a>, <a href="https://tonyzhang617.github.io/" target="_blank" rel="noopener noreferrer">Tianyi Zhang</a></p>
+            <p>QUASAR treats quantization-aware training as a weight reconstruction problem, continuously fitting a loss-aware quantized representation as the latent full-precision weights evolve. Its analysis connects weight reconstruction quality to the optimization dynamics and final quantized-model loss.</p>
+            <div class="paper-links" aria-label="QUASAR resources">
               <a href="https://arxiv.org/abs/2608.13966" target="_blank" rel="noopener noreferrer">Paper</a>
-              &nbsp;·&nbsp;
-              <span style="color: #666;">Code &nbsp;·&nbsp; Checkpoints &nbsp;·&nbsp; Technical note (forthcoming)</span>
-            </p>
-          </td>
-        </tr>
+              <a href="https://github.com/vincentcounathe/quasar-qat" target="_blank" rel="noopener noreferrer">Code</a>
+              <a href="https://huggingface.co/QUASAR-QAT" target="_blank" rel="noopener noreferrer">Checkpoints</a>
+              <span class="forthcoming">Blog post (coming soon)</span>
+            </div>
+          </div>
+        </article>
+        <article class="paper">
+          <figure class="paper-figure full-size-figure">
+            <a href="images/research/loo-transformers.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the Leave-One-Out Transformer figure at full size" title="Open full-size figure">
+              <img src="images/research/loo-transformers.png" alt="Comparison of causal, bidirectional, and leave-one-out token dependencies, showing training signal at every position for LOOT." width="2475" height="940" loading="lazy">
+            </a>
+          </figure>
+          <div class="paper-copy">
+            <h3><a href="https://openreview.net/forum?id=ic1GS1Kl0Z" target="_blank" rel="noopener noreferrer">Empowering Masked Diffusion Models to Self-Correct with Leave-One-Out Transformers</a></h3>
+            <p class="authors"><a href="https://szalouk.github.io/" target="_blank" rel="noopener noreferrer">Sofian Zalouk</a>, <strong>Vincent Counathe</strong>, Paul Jünger, Daniel Cao, Daniel Zlotnick, <a href="https://www.cs.cornell.edu/~kilian/" target="_blank" rel="noopener noreferrer">Kilian Q Weinberger</a>, <a href="https://www.cs.cornell.edu/~cdesa/" target="_blank" rel="noopener noreferrer">Christopher De Sa</a></p>
+            <p class="venue">NeurIPS 2026</p>
+            <p>LOOT predicts each token from the rest of the sequence, allowing masked diffusion language models to learn from every token and self-correct during generation.</p>
+            <div class="paper-links" aria-label="Leave-One-Out Transformer resources">
+              <a href="https://openreview.net/forum?id=ic1GS1Kl0Z" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+        </article>
+      </section>
 
-        <tr class="section-heading">
-          <td colspan="2">
-            <h2>Background</h2>
-          </td>
-        </tr>
+      <section class="research-section" aria-labelledby="earlier-heading">
+        <h2 id="earlier-heading">Earlier Research in Probability and Statistics</h2>
+        <article class="paper">
+          <figure class="paper-figure">
+            <a href="data/Random_Trees.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read Statistical Risk Bounds for Genealogical Reconstruction on Random Recursive Trees">
+              <img src="images/research/random-trees.png" alt="A random recursive tree generated by uniform attachment, with blue vertices and edges." width="1726" height="1636" loading="lazy">
+            </a>
+          </figure>
+          <div class="paper-copy">
+            <h3><a href="data/Random_Trees.pdf" target="_blank" rel="noopener noreferrer">Statistical Risk Bounds for Genealogical Reconstruction on Random Recursive Trees</a></h3>
+            <p class="authors"><strong>Vincent Counathe</strong></p>
+            <p>Non-asymptotic risk bounds for a Jordan-ordering estimator in genealogical inference.</p>
+            <div class="paper-links">
+              <a href="data/Random_Trees.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+        </article>
+        <article class="paper">
+          <figure class="paper-figure">
+            <a href="data/Community_Detection.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read Community Detection in Random Graphs">
+              <img src="images/research/community-detection.png" alt="A graph with two communities, with denser connections within each community." width="1624" height="1568" loading="lazy">
+            </a>
+            <figcaption>From Vershynin (2018), reproduced in the note.</figcaption>
+          </figure>
+          <div class="paper-copy">
+            <h3><a href="data/Community_Detection.pdf" target="_blank" rel="noopener noreferrer">Community Detection in Random Graphs</a></h3>
+            <p class="authors"><strong>Vincent Counathe</strong>, Matthieu Dagès</p>
+            <p>Expository note on spectral methods for community detection in random graphs.</p>
+            <div class="paper-links">
+              <a href="data/Community_Detection.pdf" target="_blank" rel="noopener noreferrer">Note</a>
+            </div>
+          </div>
+        </article>
+      </section>
 
-        <tr>
-          <td colspan="2">
-            <p>
-              Before Cornell, I completed my Master's in Statistics and Machine Learning at
-              <a href="https://www.imo.universite-paris-saclay.fr/en/" target="_blank" rel="noopener noreferrer">Université Paris-Saclay (Institut de Mathématiques d'Orsay)</a>, where I worked on high-dimensional statistics and machine learning with
-              <a href="https://florentkrzakala.com/" target="_blank" rel="noopener noreferrer">Florent Krzakala</a>,
-              <a href="https://people.epfl.ch/lenka.zdeborova/?lang=en" target="_blank" rel="noopener noreferrer">Lenka Zdeborová</a>, and
-              <a href="https://www.imo.universite-paris-saclay.fr/~christophe.giraud/" target="_blank" rel="noopener noreferrer">Christophe Giraud</a>.
-            </p>
-          </td>
-        </tr>
-
-        <tr class="section-heading">
-          <td colspan="2">
-            <h2>Earlier Research in Probability and Statistics</h2>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <span class="papertitle">Statistical Risk Bounds for Genealogical Reconstruction on Random Recursive Trees</span>
-            <em>Vincent Counathe</em><br>
-            <p>
-              Non-asymptotic risk bounds for a Jordan-ordering estimator in genealogical inference.
-              <a href="data/Random_Trees.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-            </p>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <span class="papertitle">Community Detection in Random Graphs</span>
-            <em>Vincent Counathe, Matthieu Dagès</em><br>
-            <p>
-              Expository note on spectral methods for community detection in random graphs.
-              <a href="data/Community_Detection.pdf" target="_blank" rel="noopener noreferrer">[Note]</a>
-            </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <section class="background-section" aria-labelledby="background-heading">
+        <h2 id="background-heading">Background</h2>
+        <p>Before Cornell, I completed my Master's in Statistics and Machine Learning at <a href="https://www.imo.universite-paris-saclay.fr/en/" target="_blank" rel="noopener noreferrer">Université Paris-Saclay (Institut de Mathématiques d'Orsay)</a>, where I worked on high-dimensional statistics and machine learning with <a href="https://florentkrzakala.com/" target="_blank" rel="noopener noreferrer">Florent Krzakala</a>, <a href="https://people.epfl.ch/lenka.zdeborova/?lang=en" target="_blank" rel="noopener noreferrer">Lenka Zdeborová</a>, and <a href="https://www.imo.universite-paris-saclay.fr/~christophe.giraud/" target="_blank" rel="noopener noreferrer">Christophe Giraud</a>.</p>
+      </section>
+      <footer>
+        <nav class="contact-links" aria-label="Footer contact and profiles">
+          <a href="mailto:vc383@cornell.edu">Email</a>
+          <a href="https://github.com/vincentcounathe" target="_blank" rel="me noopener noreferrer">GitHub</a>
+          <a href="https://x.com/counathe" target="_blank" rel="me noopener noreferrer">X</a>
+        </nav>
+      </footer>
     </main>
-
-    <footer>
-    <p style="font-size:small; text-align:center; margin-top:2em;">
-      <a href="mailto:vc383@cornell.edu">Email</a> &nbsp;/&nbsp;
-      <a href="https://github.com/vincentcounathe" target="_blank" rel="me noopener noreferrer">GitHub</a> &nbsp;/&nbsp;
-      <a href="https://x.com/counathe" target="_blank" rel="me noopener noreferrer">X</a> &nbsp;/&nbsp;
-      <a href="https://www.linkedin.com/in/vincent-counathe" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
-    </p>
-    </footer>
   </body>
 </html>
