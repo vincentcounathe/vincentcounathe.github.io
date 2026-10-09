@@ -14,7 +14,7 @@
           }
         </script>
     <title>Vincent Counathe | Quantization and Low-Precision Training</title>
-    <meta name="description" content="Vincent Counathe is a PhD student at Cornell working on quantization and low-precision training for large language models.">
+    <meta name="description" content="Vincent Counathe is a Cornell PhD student working on efficient LLM training and inference, quantization, and low-precision learning at Together AI.">
     <meta name="author" content="Vincent Counathe">
     <meta name="google-site-verification" content="tcW6WmHyX93Jh3wq-9hqSOfacci4vcICvPmJZ6hnfb4" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,15 +24,16 @@
     <meta property="og:type" content="profile">
     <meta property="og:site_name" content="Vincent Counathe">
     <meta property="og:title" content="Vincent Counathe | Quantization and Low-Precision Training">
-    <meta property="og:description" content="Cornell PhD student working on quantization and low-precision training for large language models.">
+    <meta property="og:description" content="Vincent Counathe is a Cornell PhD student working on efficient LLM training and inference, quantization, and low-precision learning at Together AI.">
     <meta property="og:url" content="https://vincentcounathe.github.io/">
     <meta property="og:image" content="https://vincentcounathe.github.io/images/profile.jpg">
     <meta property="og:image:alt" content="Portrait of Vincent Counathe">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@counathe">
     <meta name="twitter:title" content="Vincent Counathe | Quantization and Low-Precision Training">
-    <meta name="twitter:description" content="Cornell PhD student working on quantization and low-precision training for large language models.">
+    <meta name="twitter:description" content="Vincent Counathe is a Cornell PhD student working on efficient LLM training and inference, quantization, and low-precision learning at Together AI.">
     <meta name="twitter:image" content="https://vincentcounathe.github.io/images/profile.jpg">
+    <meta name="twitter:image:alt" content="Portrait of Vincent Counathe">
 
     <script type="application/ld+json">
       {
@@ -42,30 +43,50 @@
             "@type": "WebSite",
             "@id": "https://vincentcounathe.github.io/#website",
             "url": "https://vincentcounathe.github.io/",
-            "name": "Vincent Counathe"
+            "name": "Vincent Counathe",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://vincentcounathe.github.io/#person"
+            }
           },
           {
             "@type": "ProfilePage",
             "@id": "https://vincentcounathe.github.io/#profile",
             "url": "https://vincentcounathe.github.io/",
             "name": "Vincent Counathe",
-            "dateModified": "2026-10-08",
+            "dateModified": "2026-10-08T17:14:20-07:00",
             "isPartOf": {
               "@id": "https://vincentcounathe.github.io/#website"
             },
             "mainEntity": {
               "@id": "https://vincentcounathe.github.io/#person"
-            }
+            },
+            "description": "Vincent Counathe is a Cornell PhD student working on efficient LLM training and inference, quantization, and low-precision learning at Together AI.",
+            "inLanguage": "en",
+            "hasPart": [
+              {
+                "@id": "https://arxiv.org/abs/2608.13966"
+              },
+              {
+                "@id": "https://openreview.net/forum?id=ic1GS1Kl0Z"
+              },
+              {
+                "@id": "https://vincentcounathe.github.io/data/Random_Trees.pdf"
+              },
+              {
+                "@id": "https://vincentcounathe.github.io/data/Community_Detection.pdf"
+              }
+            ]
           },
           {
             "@type": "Person",
             "@id": "https://vincentcounathe.github.io/#person",
             "name": "Vincent Counathe",
             "alternateName": "@counathe",
-            "description": "Cornell PhD student working on quantization and low-precision training for large language models.",
+            "description": "Vincent Counathe is a Cornell PhD student working on efficient LLM training and inference, quantization, and low-precision learning at Together AI.",
             "url": "https://vincentcounathe.github.io/",
             "image": "https://vincentcounathe.github.io/images/profile.jpg",
-            "email": "mailto:counathe.vincent@gmail.com",
+            "email": "counathe.vincent@gmail.com",
             "jobTitle": "PhD Student",
             "mainEntityOfPage": {
               "@id": "https://vincentcounathe.github.io/#profile"
@@ -95,8 +116,116 @@
               "Quantization",
               "Quantization-aware training",
               "Low-precision training",
-              "Large language models"
-            ]
+              "Large language models",
+              "Efficient language model training",
+              "Efficient language model inference",
+              "Masked diffusion language models"
+            ],
+            "givenName": "Vincent",
+            "familyName": "Counathe"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://arxiv.org/abs/2608.13966",
+            "url": "https://arxiv.org/abs/2608.13966",
+            "headline": "QUASAR: Lowering the Loss Floor of Quantization-Aware Training with Loss-Aware Reconstruction",
+            "author": [
+              {
+                "@id": "https://vincentcounathe.github.io/#person"
+              },
+              {
+                "@type": "Person",
+                "name": "Ben Athiwaratkun",
+                "url": "https://benathi.github.io/"
+              },
+              {
+                "@type": "Person",
+                "name": "Christopher De Sa",
+                "url": "https://www.cs.cornell.edu/~cdesa/"
+              },
+              {
+                "@type": "Person",
+                "name": "Tianyi Zhang",
+                "url": "https://tonyzhang617.github.io/"
+              }
+            ],
+            "description": "QUASAR treats quantization-aware training as a weight reconstruction problem, continuously fitting a loss-aware quantized representation as the latent full-precision weights evolve. Its analysis connects weight reconstruction quality to the optimization dynamics and final quantized-model loss.",
+            "image": "https://vincentcounathe.github.io/images/research/quasar-gradients.png",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://openreview.net/forum?id=ic1GS1Kl0Z",
+            "url": "https://openreview.net/forum?id=ic1GS1Kl0Z",
+            "headline": "Empowering Masked Diffusion Models to Self-Correct with Leave-One-Out Transformers",
+            "author": [
+              {
+                "@type": "Person",
+                "name": "Sofian Zalouk",
+                "url": "https://szalouk.github.io/"
+              },
+              {
+                "@id": "https://vincentcounathe.github.io/#person"
+              },
+              {
+                "@type": "Person",
+                "name": "Paul Jünger"
+              },
+              {
+                "@type": "Person",
+                "name": "Daniel Cao"
+              },
+              {
+                "@type": "Person",
+                "name": "Daniel Zlotnick"
+              },
+              {
+                "@type": "Person",
+                "name": "Kilian Q Weinberger",
+                "url": "https://www.cs.cornell.edu/~kilian/"
+              },
+              {
+                "@type": "Person",
+                "name": "Christopher De Sa",
+                "url": "https://www.cs.cornell.edu/~cdesa/"
+              }
+            ],
+            "description": "LOOT predicts each token from the rest of the sequence, allowing masked diffusion language models to learn from every token and self-correct during generation.",
+            "creativeWorkStatus": "Accepted at NeurIPS 2026",
+            "image": "https://vincentcounathe.github.io/images/research/loo-transformers.png",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://vincentcounathe.github.io/data/Random_Trees.pdf",
+            "url": "https://vincentcounathe.github.io/data/Random_Trees.pdf",
+            "headline": "Statistical Risk Bounds for Genealogical Reconstruction on Random Recursive Trees",
+            "author": [
+              {
+                "@id": "https://vincentcounathe.github.io/#person"
+              }
+            ],
+            "description": "Non-asymptotic risk bounds for a Jordan-ordering estimator in genealogical inference.",
+            "image": "https://vincentcounathe.github.io/images/research/random-trees.png",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://vincentcounathe.github.io/data/Community_Detection.pdf",
+            "url": "https://vincentcounathe.github.io/data/Community_Detection.pdf",
+            "headline": "Community Detection in Random Graphs",
+            "author": [
+              {
+                "@id": "https://vincentcounathe.github.io/#person"
+              },
+              {
+                "@type": "Person",
+                "name": "Matthieu Dagès"
+              }
+            ],
+            "description": "Expository note on spectral methods for community detection in random graphs.",
+            "image": "https://vincentcounathe.github.io/images/research/community-detection.png",
+            "inLanguage": "en"
           }
         ]
       }
